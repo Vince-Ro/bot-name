@@ -1,1 +1,3 @@
-# bot-name
+game.Workspace.Time = Neijw enfmwda
+
+
