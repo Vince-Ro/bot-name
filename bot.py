@@ -18,26 +18,10 @@ client = commands.Bot(command_prefix="-")
 cogs = ["cogs.automod","cogs.cmds", "cogs.bdev", "cogs.commands", "cogs.utils", "cogs.moderation"] ##add more cogs if needed 
 
 
-#async def status():
-  #while True:
-    #await client.wait_until_ready()
-   # await client.change_presence(status=discord.Status.online, activity=discord.Game(name="Running Beta", type=3))
-    #sleep(10)
-   # await client.change_presence(status=discord.Status.online, activity=discord.Game(name="Hope this works", type=3))
-    #sleep(10)
-    #await client.change_presence(status=discord.Status.online, activity=discord.Game(name="Testing Something", type=3))
-    #sleep(10)
-
-
 @client.event
 async def on_ready():
-  #activity = discord.Game(name=f"{len(client.guilds)} servers || ALPHA BOT", type=discord.ActivityType.watching)
-  #await client.change_presence(status=discord.Status.online, activity=activity)
   await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f"{len(client.guilds)} servers || ALPHA BOT"))
   print("Bot connected")
- # client.lopp.create_task(status())
-  
-#
 
 for cog in cogs:
   try:
